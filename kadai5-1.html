@@ -14,6 +14,8 @@
     <script>
         async function zip_api(myForm) {
             const endpoint = "https://zipcloud.ibsnet.co.jp/api/search";
+            const zipcode = myForm.zipcode.value;
+
             // ここにコードを書く
             const result = data.results[0];
             const address = `${result.address1} ${result.address2} ${result.address3}`;
