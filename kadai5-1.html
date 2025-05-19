@@ -17,6 +17,9 @@
             const zipcode = myForm.zipcode.value;
 
             // ここにコードを書く
+
+            const response = await fetch(`${endpoint}?zipcode=${zipcode}`);
+            const data = await response.json();
             const result = data.results[0];
             const address = `${result.address1} ${result.address2} ${result.address3}`;
                     
